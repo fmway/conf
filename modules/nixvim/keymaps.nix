@@ -19,10 +19,10 @@ in { ... }:
     (keymap.n ";" ":" "CMD enter command mode" {})
     (keymap.i "<C-n>" "<cmd>NvimTreeToggle <CR><ESC>" "Toggle NvimTree" {})
     (keymap.n "<A-t>" (mkRawFn ''
-      require("nvchad.themes").open { style = "compat", border = true, }
+      require("nvchad.themes").open { style = "compact", border = true, }
     '') "Show themes menu" {})
-    (keymap.n "<leader>lx" "<CMD>LspStop<Enter>" "Stop LSP" {})
-    (keymap.n "<leader>ls" "<CMD>LspStart<Enter>" "Start LSP" {})
-    (keymap.n "<leader>lr" "<CMD>LspRestart<Enter>" "Restart LSP" {})
+    (keymap.n "<leader>lx" "<CMD>lsp disable<Enter>" "Stop/Disable LSP" {})
+    (keymap.n "<leader>ls" "<CMD>lsp enable<Enter>" "Start/Enable LSP" {})
+    (keymap.n "<leader>lr" "<CMD>lsp restart<Enter>" "Restart LSP" {})
   ];
 }
